@@ -1,0 +1,46 @@
+[debug] [2025-02-28T22:22:12.500Z] ----------------------------------------------------------------------
+[debug] [2025-02-28T22:22:12.505Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jbfon\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-02-28T22:22:12.506Z] CLI Version:   13.32.0
+[debug] [2025-02-28T22:22:12.506Z] Platform:      win32
+[debug] [2025-02-28T22:22:12.506Z] Node Version:  v20.17.0
+[debug] [2025-02-28T22:22:12.507Z] Time:          Fri Feb 28 2025 16:22:12 GMT-0600 (hora estándar central)
+[debug] [2025-02-28T22:22:12.507Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-28T22:22:13.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-28T22:22:13.028Z] > authorizing via signed-in user (josuebf13@gmail.com)
+[debug] [2025-02-28T22:22:13.029Z] [iam] checking project prueba-uno-75254 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-02-28T22:22:13.031Z] Checked if tokens are valid: true, expires at: 1740784888075
+[debug] [2025-02-28T22:22:13.031Z] Checked if tokens are valid: true, expires at: 1740784888075
+[debug] [2025-02-28T22:22:13.034Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-uno-75254:testIamPermissions [none]
+[debug] [2025-02-28T22:22:13.034Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-uno-75254:testIamPermissions x-goog-quota-user=projects/prueba-uno-75254
+[debug] [2025-02-28T22:22:13.034Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-uno-75254:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-28T22:22:13.466Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-uno-75254:testIamPermissions 200
+[debug] [2025-02-28T22:22:13.467Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/prueba-uno-75254:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-28T22:22:13.469Z] Checked if tokens are valid: true, expires at: 1740784888075
+[debug] [2025-02-28T22:22:13.469Z] Checked if tokens are valid: true, expires at: 1740784888075
+[debug] [2025-02-28T22:22:13.470Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/prueba-uno-75254 [none]
+[debug] [2025-02-28T22:22:14.008Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/prueba-uno-75254 200
+[debug] [2025-02-28T22:22:14.008Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/prueba-uno-75254 {"projectId":"prueba-uno-75254","projectNumber":"630982624435","displayName":"prueba-uno","name":"projects/prueba-uno-75254","resources":{"hostingSite":"prueba-uno-75254"},"state":"ACTIVE","etag":"1_95f7b41a-bbdc-4fbc-af5b-5d828d528fa1"}
+[info] 
+[info] === Deploying to 'prueba-uno-75254'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-02-28T22:22:14.023Z] Checked if tokens are valid: true, expires at: 1740784888075
+[debug] [2025-02-28T22:22:14.023Z] Checked if tokens are valid: true, expires at: 1740784888075
+[debug] [2025-02-28T22:22:14.023Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/prueba-uno-75254/versions [none]
+[debug] [2025-02-28T22:22:14.023Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/prueba-uno-75254/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-02-28T22:22:15.444Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/prueba-uno-75254/versions 200
+[debug] [2025-02-28T22:22:15.445Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/prueba-uno-75254/versions {"name":"projects/630982624435/sites/prueba-uno-75254/versions/638532f5ba38f9bb","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[prueba-uno-75254]: beginning deploy... 
+[info] i  hosting[prueba-uno-75254]: found 127 files in ./ 
+[debug] [2025-02-28T22:22:15.569Z] [hosting] uploading with 200 concurrency
+[debug] [2025-02-28T22:22:15.571Z] [hosting] hash cache [] not populated
+[debug] [2025-02-28T22:22:15.862Z] Error: EBUSY: resource busy or locked, open 'C:\Users\jbfon\OneDrive\Escritorio\appMotosPilo\.vs\appMotosPilo\FileContentIndex\b789035a-e401-4ea5-ae0a-c47138a3d339.vsidx'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-02-28T22:22:15.864Z] Error: EBUSY: resource busy or locked, open 'C:\Users\jbfon\OneDrive\Escritorio\appMotosPilo\.vs\appMotosPilo\FileContentIndex\75b85e5d-f220-415a-a403-07d3d27a6850.vsidx'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-02-28T22:22:15.866Z] Error: EBUSY: resource busy or locked, open 'C:\Users\jbfon\OneDrive\Escritorio\appMotosPilo\.vs\appMotosPilo\FileContentIndex\7595d18d-d09c-4b8c-a314-d41332aa60d8.vsidx'
+[error] 
+[error] Error: An unexpected error has occurred.
