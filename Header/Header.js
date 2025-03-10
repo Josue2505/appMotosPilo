@@ -2,7 +2,7 @@ class MiHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `    
         <header>
-          <nav class="navbar navbar-expand-lg" style="background-color: #D4A017;">
+            <nav class="navbar navbar-expand-lg" style="background-color: #B22222;">
               <div class="container">
                   <!-- Logo o Nombre del Sitio -->
                   <a class="navbar-brand fw-bold text-white" href="Home.html">Motos Pilo</a>
@@ -17,16 +17,22 @@ class MiHeader extends HTMLElement {
                   <div class="collapse navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav ms-auto">
                           <li class="nav-item">
-                              <a class="nav-link text-white" href="Home.html">Inicio</a>
+                              <a class="nav-link text-white" href="index.html">Inicio</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link text-white" href="servicios.html">Servicios</a>
+                              <a class="nav-link text-white" href="Vistas/servicios.html">Servicios</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+                              <a class="nav-link text-white" href="Vistas/horarios.html">Horarios</a>
+                          </li>                          
+                          <li class="nav-item">
+                              <a class="nav-link text-white" href="Vistas/blog.html">Blog</a>
                           </li>
                           <li class="nav-item">
-                              <a class="nav-link text-white" href="contacto.html">Contacto</a>
+                              <a class="nav-link text-white" href="Vistas/nosotros.html">Sobre Nosotros</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-white" href="Vistas/contacto.html">Contacto</a>
                           </li>
                       </ul>
                   </div>
