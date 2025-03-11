@@ -15,27 +15,40 @@ class MiHeader extends HTMLElement {
 
                   <!-- Menú de Navegación -->
                   <div class="collapse navbar-collapse" id="navbarNav">
-                      <ul class="navbar-nav ms-auto">
-                          <li class="nav-item">
-                              <a class="nav-link text-white" href="index.html">Inicio</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link text-white" href="Vistas/servicios.html">Servicios</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link text-white" href="Vistas/horarios.html">Horarios</a>
-                          </li>                          
-                          <li class="nav-item">
-                              <a class="nav-link text-white" href="Vistas/blog.html">Blog</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link text-white" href="Vistas/nosotros.html">Sobre Nosotros</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link text-white" href="Vistas/contacto.html">Contacto</a>
-                          </li>
-                      </ul>
-                  </div>
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">
+                <img src="Imagenes/hogar.png" alt="Inicio" class="icono-navbar"> Inicio
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="Vistas/servicios.html">
+                <img src="Imagenes/servicio.png" alt="Servicios" class="icono-navbar"> Servicios
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="Vistas/horarios.html">
+                <img src="Imagenes/calendario.png" alt="Horarios" class="icono-navbar"> Horarios
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="Vistas/blog.html">
+                <img src="Imagenes/blog.png" alt="Blog" class="icono-navbar"> Blog
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="Vistas/nosotros.html">
+                <img src="Imagenes/sobrenosotros.png" alt="Sobre Nosotros" class="icono-navbar"> Sobre Nosotros
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="Vistas/contacto.html">
+                <img src="Imagenes/contactos.png" alt="Contacto" class="icono-navbar"> Contacto
+            </a>
+        </li>
+    </ul>
+</div>
+
               </div>
           </nav>
         </header>
