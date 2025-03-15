@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.hero {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+.schedule-container {
+    margin: 30px auto;
+    max-width: 800px;
+}
+.schedule-table {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.table th, .table td {
+    text-align: center;
+}
+.available {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.unavailable {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+}
+.available:hover {
+    background-color: #218838;
+}
+.unavailable:hover {
+    background-color: #c82333;
+}
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 10px;
+    }
+    .schedule-container {
+        padding: 0 15px;
+    }
+}
