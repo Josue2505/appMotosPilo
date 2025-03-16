@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,6 +69,7 @@
 
         const today = new Date();
         const weekStartDate = getWeekStartDate(today);
+        const maxReservasPorHorario = 3;
 
         function obtenerEstadoGuardado() {
             const lastResetDate = localStorage.getItem("lastResetDate");
@@ -98,19 +100,22 @@
             const horariosGuardados = obtenerEstadoGuardado();
 
             if (horarios[dia].length === 0) {
-                tbody.innerHTML = `<tr><td colspan="2" class="unavailable">Cerrado</td></tr>`;
-            } else {
-                horarios[dia].forEach(hora => {
-                    const estado = horariosGuardados[dia] && horariosGuardados[dia].includes(hora) ? "unavailable" : "available";
-                    const estadoTexto = estado === "available" ? "Disponible" : "No disponible";
+            tbody.innerHTML = `<tr><td colspan="2" class="unavailable">Cerrado</td></tr>`;
+        } else {
+            horarios[dia].forEach(hora => {
+                const reservasActuales = (horariosGuardados[dia] && horariosGuardados[dia][hora]) || 0;
+                const estado = reservasActuales >= maxReservasPorHorario ? "unavailable" : "available";
+                const estadoTexto = reservasActuales >= maxReservasPorHorario 
+                    ? "No disponible" 
+                    : `Espacios Disponibles (${maxReservasPorHorario - reservasActuales})`;
 
-                    const row = `<tr>
-                        <td>${hora}</td>
-                        <td class="${estado}" data-hora="${hora}" data-dia="${dia}">${estadoTexto}</td>
-                    </tr>`;
-                    tbody.innerHTML += row;
-                });
-            }
+                const row = `<tr>
+                    <td>${hora}</td>
+                    <td class="${estado}" data-hora="${hora}" data-dia="${dia}">${estadoTexto}</td>
+                </tr>`;
+                tbody.innerHTML += row;
+            });
+        }
 
             agregarEventosClick();
         }
@@ -121,24 +126,17 @@
                     const dia = this.getAttribute("data-dia");
                     const hora = this.getAttribute("data-hora");
 
-                    // Bloqueo de hora para otros usuarios
-                    if (this.classList.contains("unavailable")) {
-                        return; // No se puede hacer clic en horas ya ocupadas
-                    }
-
                     let horariosGuardados = obtenerEstadoGuardado();
-                    if (!horariosGuardados[dia]) horariosGuardados[dia] = [];
+                if (!horariosGuardados[dia]) horariosGuardados[dia] = {};
+                if (!horariosGuardados[dia][hora]) horariosGuardados[dia][hora] = 0;
 
-                    if (horariosGuardados[dia].includes(hora)) {
-                        horariosGuardados[dia] = horariosGuardados[dia].filter(h => h !== hora);
-                    } else {
-                        horariosGuardados[dia].push(hora);
-                    }
-
+                if (horariosGuardados[dia][hora] < maxReservasPorHorario) {
+                    horariosGuardados[dia][hora] += 1;
                     guardarEstado(horariosGuardados);
                     actualizarHorario(dia);
-                });
+                };
             });
+        });
         }
 
         // Función para obtener la fecha de inicio de la semana
