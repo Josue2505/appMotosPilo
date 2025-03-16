@@ -5,7 +5,9 @@ class MiHeader extends HTMLElement {
             <nav class="navbar navbar-expand-lg" style="background-color: #B22222;">
               <div class="container">
                   <!-- Logo o Nombre del Sitio -->
-                  <a class="navbar-brand fw-bold text-white" href="Home.html">Motos Pilo</a>
+                  <a class="navbar-brand fw-bold text-white" href="index.html">Motos Pilo</a>
+                  
+
 
                   <!-- Botón de Menú para Dispositivos Pequeños -->
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -56,3 +58,8 @@ class MiHeader extends HTMLElement {
   }
 }
 customElements.define("mi-header", MiHeader);
+{/* <div class="logo">
+            <a href="servicios.html" style="min-width: 7rem;">
+              <img src="Imagenes/contactos.png" alt="Logo" width="142">
+            </a>
+          </div> */}

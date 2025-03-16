@@ -56,7 +56,7 @@
       defer
     ></script>
 
-    <link rel="stylesheet" href="../css/Home.css" />
+    <link rel="stylesheet" href="css/Home.css" />
     <script src="../Header/Header.js" defer></script>
     <script src="../Footer/Footer.js" defer></script>
   </head>
@@ -65,125 +65,84 @@
     <header>
       <mi-header></mi-header>
     </header>
-    holaaaaaaaaaaaa
+
     <!-- Sección Principal -->
     <section class="hero">
       <div class="container">
-        <h1>¡Bienvenido a nuestro Taller de Motos!</h1>
-        <p>Servicio de calidad para tu motocicleta, con mecánicos expertos.</p>
-        <a href="#servicios" class="btn btn-primary">Ver Servicios</a>
+        <h1>
+          Bienvenido a Motos Pilo <br />
+          Donde la adrenalina y la precisión se encuentran
+        </h1>
+        <p>
+          Somos expertos en potenciar el rendimiento de tu motocicleta con un
+          servicio de calidad, rapidez y confianza. <br />Tu moto, nuestra
+          pasión.
+        </p>
+        <a href="#servicios" class="btn btn-primary">Ver servicios</a>
       </div>
     </section>
+
     <br /><br />
     <section class="container">
-      <div
-        id="carouselExampleDark"
-        class="carousel carousel-dark slide"
-        style="max-width: 100%; height: 500px"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner" style="height: 100%">
-          <div
-            class="carousel-item active"
-            data-bs-interval="10000"
-            style="height: 100%"
-          >
-            <img
-              src="../Imagenes/prueba.jpeg"
-              class="d-block w-100"
-              alt="..."
-              style="object-fit: cover; height: 100%"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-          </div>
-          <div
-            class="carousel-item"
-            data-bs-interval="2000"
-            style="height: 100%"
-          >
-            <img
-              src="../Imagenes/prueba.jpeg"
-              class="d-block w-100"
-              alt="..."
-              style="object-fit: cover; height: 100%"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item" style="height: 100%">
-            <img
-              src="../Imagenes/prueba.jpeg"
-              class="d-block w-100"
-              alt="..."
-              style="object-fit: cover; height: 100%"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+      <section class="container mt-4">
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <img src="../Imagenes/carrusel5.jpg" alt="Moto deportiva">
+      <img src="../Imagenes/carrusel1.jpg" alt="Moto en carretera">
+      <img src="Imagenes/carrusel2.jpg" alt="Moto personalizada">
+      <img src="Imagenes/carrusel3.jpg" alt="Moto clásica">
+      <img src="Imagenes/carrusel4.jpg" alt="Moto de carreras">
+      <!-- Se repiten para el efecto infinito -->
+      <img src="Imagenes/carrusel5.jpg" alt="Moto deportiva">
+      <img src="Imagenes/carrusel1.jpg" alt="Moto en carretera">
+      <img src="Imagenes/carrusel2.jpg" alt="Moto personalizada">
+      <img src="Imagenes/carrusel3.jpg" alt="Moto clásica">
+      <img src="Imagenes/carrusel4.jpg" alt="Moto de carreras">
+    </div>
+  </div>
+</section>
+
+<style>
+  .carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    width: 200%; /* Asegura que haya suficiente espacio para el desplazamiento */
+    animation: scroll 50s linear infinite;
+  }
+
+  .carousel-track img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%); /* Mueve todo el track completamente */
+    }
+  }
+</style>
+
     </section>
 
     <!-- Sección de Servicios -->
     <section id="servicios" class="container my-5">
       <h2 class="text-center mb-4">Nuestros Servicios</h2>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-4">
           <div class="card service-card">
             <img
-              src="../assets/mantenimiento.jpg"
+              src="Imagenes/motomantenimiento.jpg"
               class="card-img-top"
               alt="Mantenimiento"
             />
@@ -196,10 +155,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <br />
+        <div class="col-md-4 mb-4">
           <div class="card service-card">
             <img
-              src="../assets/reparacion.jpg"
+              src="Imagenes/prueba.jpeg"
               class="card-img-top"
               alt="Reparación"
             />
@@ -212,10 +172,11 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <br /><br /><br />
+        <div class="col-md-4 mb-4">
           <div class="card service-card">
             <img
-              src="../assets/personalizacion.jpg"
+              src="Imagenes/motopersonalizada.jpg"
               class="card-img-top"
               alt="Personalización"
             />
@@ -229,19 +190,147 @@
           </div>
         </div>
       </div>
+
+      <div class="text-center mt-4">
+        <a href="Vistas/servicios.html" class="btn btn-primary btn-lg shadow-lg"
+          >Ver más servicios</a
+        >
+      </div>
+    </section>
+
+    <section class="mt-5" id="marcas">
+      <div class="container text-center">
+        <h2 class="mb-4">¡Las Mejores Marcas de Motos en Buenas Manos!</h2>
+        <p class="lead">
+          En nuestro taller, contamos con experiencia en el mantenimiento y
+          reparación de las principales marcas de motos del mercado. Confía en
+          nosotros para mantener tu moto en su mejor forma, <span class="negrita">independientemente
+          de la marca que manejes</span>. <br>¡Te garantizamos un servicio de calidad,
+          rápido y confiable!
+        </p>
+        <div class="row">
+          <!-- Tarjeta 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="Imagenes/BMW.jfif"
+                class="card-img-top"
+                alt="BMW"
+              />
+              <div class="card-body">
+                <!-- <h5 class="card-title">Marca 1</h5> -->
+                <p class="card-text">
+                  Expertos en el cuidado de esta marca icónica. ¡Déjanos
+                  ayudarte a mantener tu moto como nueva!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="Imagenes/suzuki.jfif"
+                class="card-img-top"
+                alt="Suzuki"
+              />
+              <div class="card-body">
+                <!-- <h5 class="card-title">Marca 2</h5> -->
+                <p class="card-text">
+                  Si eres fan de Suzuki, tenemos todo lo necesario para
+                  ofrecerte un servicio de calidad.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+              <img
+                src="Imagenes/yamaha.jfif"
+                class="card-img-top"
+                alt="Yamaha"
+              />
+              <div class="card-body">
+                <!-- <h5 class="card-title">Marca 3</h5> -->
+                <p class="card-text">
+                  Mantén tu moto en su mejor estado con nuestros servicios
+                  especializados para Yamaha.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Agregar más tarjetas si es necesario -->
+        </div>
+      </div>
     </section>
 
     <!-- Testimonios -->
     <section class="testimonials text-center">
       <div class="container">
         <h2>Lo que dicen nuestros clientes</h2>
-        <p>"Excelente servicio, mi moto quedó como nueva." - Carlos G.</p>
-        <p>"Muy profesionales y rápidos en la reparación." - Ana P.</p>
+        <p>"Excelente servicio, mi moto quedó como nueva." - Gerson B.</p>
+        <p>"Muy profesionales y rápidos en la reparación." - Jordy C.</p>
         <p>
-          "Recomiendo totalmente este taller, atención de primera." - Luis M.
+          "Recomiendo totalmente este taller, atención de primera." - Jason M.
         </p>
       </div>
     </section>
+
+    <section class="gallery text-center">
+  <div class="container">
+    <h2>Galería de Imágenes</h2>
+    <br>
+    <div class="row">
+      <!-- Cuadro 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card border-0">
+          <img src="Imagenes/yamaha.jfif" class="card-img-top img-fluid gallery-img" alt="Imagen 1" style="border-radius: 15px; object-fit: cover; height: 400px; transition: transform 0.3s ease-in-out;">
+        </div>
+      </div>
+
+      <!-- Cuadro 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card border-0">
+          <img src="Imagenes/carrusel3.jpg" class="card-img-top img-fluid gallery-img" alt="Imagen 2" style="border-radius: 15px; object-fit: cover; height: 400px; transition: transform 0.3s ease-in-out;">
+        </div>
+      </div>
+
+      <!-- Cuadro 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card border-0">
+          <img src="Imagenes/motomantenimiento.jpg" class="card-img-top img-fluid gallery-img" alt="Imagen 3" style="border-radius: 15px; object-fit: cover; height: 400px; transition: transform 0.3s ease-in-out;">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Cuadro 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card border-0">
+          <img src="Imagenes/motopersonalizada.jpg" class="card-img-top img-fluid gallery-img" alt="Imagen 4" style="border-radius: 15px; object-fit: cover; height: 400px; transition: transform 0.3s ease-in-out;">
+        </div>
+      </div>
+
+      <!-- Cuadro 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card border-0">
+          <img src="Imagenes/mantenimientoMoto.jpg" class="card-img-top img-fluid gallery-img" alt="Imagen 5" style="border-radius: 15px; object-fit: cover; height: 400px; transition: transform 0.3s ease-in-out;">
+        </div>
+      </div>
+
+      <!-- Cuadro 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card border-0">
+          <img src="Imagenes/carrusel4.jpg" class="card-img-top img-fluid gallery-img" alt="Imagen 6" style="border-radius: 15px; object-fit: cover; height: 400px; transition: transform 0.3s ease-in-out;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
     <!-- Sección de Contacto -->
     <section class="contact-section text-center">
@@ -250,7 +339,6 @@
       <p>📞 Teléfono: +506 1234-5678</p>
       <p>📧 Email: contacto@tallermotos.com</p>
     </section>
-
     <!-- Pie de Página -->
     <footer class="footer">
       <mi-footer></mi-footer>

@@ -1,0 +1,43 @@
+/* Estilo para la tarjeta personalizada */
+/* Estilo para las tarjetas */
+.custom-card {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+/* Iconos personalizados */
+.custom-icon {
+  font-size: 4rem;
+  margin-top: 20px;
+  color: #007bff;
+}
+
+
+.custom-card .card-body {
+  padding: 20px;
+}
+
+.custom-card .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* .custom-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-top: 15px;
+} */
+
+.servicios {
+  background-color: #f8f9fa;
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+}
+
+
