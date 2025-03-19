@@ -10,10 +10,11 @@ body {
 }
 
 .hero .container {
-    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    /*background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
+    backdrop-filter: blur(10px);
 }
 
 

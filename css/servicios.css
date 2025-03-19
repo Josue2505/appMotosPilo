@@ -1,5 +1,4 @@
 /* Estilo para la tarjeta personalizada */
-/* Estilo para las tarjetas */
 .custom-card {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
@@ -21,16 +20,21 @@
   padding: 20px;
 }
 
+.card-body {
+  overflow: hidden; /* Oculta el contenido que no cabe */
+}
+
+.card-body p {
+  white-space: nowrap; /* Impide que el texto se envuelva */
+  overflow: hidden; /* Oculta el texto que se sale del contenedor */
+  text-overflow: ellipsis; /* Muestra "..." al final del texto */
+}
+
 .custom-card .card-title {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-/* .custom-icon {
-  font-size: 3rem;
-  color: #007bff;
-  margin-top: 15px;
-} */
 
 .servicios {
   background-color: #f8f9fa;
@@ -40,4 +44,9 @@ h1 {
   font-family: 'Arial', sans-serif;
 }
 
-
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}

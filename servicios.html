@@ -4,22 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios Taller de Motos</title>
+  <title>Servicios</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-  <!-- Font Awesome -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
-
   <!-- CSS personalizado -->
   <link rel="stylesheet" href="../css/servicios.css">
+  <link rel="stylesheet" href="../css/banner.css">
 
   <script src="Header/Header.js" defer></script>
   <script src="Footer/Footer.js" defer></script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
 </head>
 
 <body>
@@ -28,6 +27,19 @@
     <mi-header></mi-header>
   </header>
 
+  <!-- Banner -->
+  <div class="banner">
+    <img src="Imagenes/bannerServicios2.png" alt="Banner de servicios" class="img-fluid">
+  </div>
+
+  <div class="banner">
+  <video autoplay muted loop class="img-fluid">
+    <source src="Imagenes/bannerServiciosV.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+</div>
+
+
   <section class="servicios py-5">
     <div class="container">
       <h1 class="display-4 text-center mb-5">Nuestros Servicios</h1>
@@ -35,160 +47,607 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <!-- Lista de Servicios -->
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-screwdriver-wrench card-img-top text-center custom-icon"></i>
-            <div class="card-body">
-              <h5 class="card-title">Mantenimiento Preventivo</h5>
-              <p class="card-text">Revisión y ajuste para evitar fallos futuros.</p>
+          <div class="card shadow-sm custom-card d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#modal1">
+            <div class="d-flex align-items-center">
+              <img src="Imagenes/vehiculo.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
+              <div>
+                <h5 class="card-title">Mantenimiento General</h5>
+                <p class="card-text">Revisión y ajuste para evitar fallos futuros.</p>
+              </div>
             </div>
           </div>
         </div>
 
+
+
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-oil-can card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal2">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Cambio de Aceite</h5>
               <p class="card-text">Sustitución de aceite para un motor más eficiente.</p>
             </div>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-car card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal3">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/neumatico.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Alineación y Balanceo</h5>
               <p class="card-text">Ajuste preciso para una conducción suave.</p>
             </div>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-car-battery card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal4">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/bateria.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Cambio de Batería</h5>
               <p class="card-text">Sustitución de batería para un arranque confiable.</p>
             </div>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-wrench card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal5">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/suspension.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Revisión de Suspensión</h5>
               <p class="card-text">Ajuste y reparación de amortiguadores.</p>
             </div>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-tire card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal6">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/neumatico-desinflado.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Cambio de Neumáticos</h5>
               <p class="card-text">Sustitución de llantas para un mejor agarre.</p>
             </div>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-paint-roller card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal7">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Pintura y Detallado</h5>
               <p class="card-text">Personalización estética de tu moto.</p>
             </div>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-wind card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal8">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/cadena.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Revisión de Cadena</h5>
               <p class="card-text">Ajuste y lubricación de la cadena.</p>
             </div>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-plug card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal9">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/motor-electrico.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Revisión Eléctrica</h5>
               <p class="card-text">Diagnóstico y solución de fallas eléctricas.</p>
             </div>
+            </div>
           </div>
         </div>
 
-        <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-laptop-code card-img-top text-center custom-icon"></i>
+        <!-- <div class="col">
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal10">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Diagnóstico Computarizado</h5>
               <p class="card-text">Análisis electrónico del motor.</p>
             </div>
+            </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-filter card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal11">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/filtrar.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Cambio de Filtros</h5>
               <p class="card-text">Sustitución de filtro de aire y aceite.</p>
             </div>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-clutch card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal12">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/palanca.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Revisión de Embrague</h5>
               <p class="card-text">Ajuste y cambio del sistema de embrague.</p>
             </div>
+            </div>
           </div>
         </div>
 
-        <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-motorcycle card-img-top text-center custom-icon"></i>
+        <!-- <div class="col">
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal13">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Rectificación de Motor</h5>
               <p class="card-text">Reparación profunda del motor.</p>
             </div>
+            </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-lightbulb card-img-top text-center custom-icon"></i>
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal14">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/luces-de-coche.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
               <h5 class="card-title">Revisión de Luces</h5>
               <p class="card-text">Verificación y cambio de luces.</p>
             </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm custom-card">
-            <i class="fa-solid fa-truck-monster card-img-top text-center custom-icon"></i>
-            <div class="card-body">
-              <h5 class="card-title">Asistencia en Ruta</h5>
-              <p class="card-text">Servicio de rescate y reparación de emergencia.</p>
             </div>
           </div>
         </div>
 
+        <!-- <div class="col">
+          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal15">
+            <div class="d-flex align-items-center">
+            <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
+            <div class="card-body">
+              <h5 class="card-title">Asistencia en Ruta</h5>
+              <p class="card-text">Servicio de rescate y reparación de emergencia.</p>
+            </div>
+            </div>
+          </div>
+        </div> -->
+
       </div>
     </div>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal1Label">Mantenimiento Preventivo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Nuestro servicio de <strong>Mantenimiento Preventivo</strong> está diseñado para garantizar el 
+              correcto funcionamiento de tu motocicleta y prevenir fallos inesperados. 
+              <br><br>
+              Este procedimiento incluye:
+            </p>
+            <ul>
+              <li>🔍 <strong>Inspección general</strong> del estado mecánico y eléctrico.</li>
+              <li>🛠 <strong>Ajuste y lubricación</strong> de componentes clave como cadena, frenos y suspensión.</li>
+              <li>⚙ <strong>Revisión de niveles de líquidos</strong> (aceite y frenos).</li>
+              <li>🔧 <strong>Verificación de neumáticos</strong> y calibración de presión.</li>
+              <li>🔋 <strong>Chequeo del sistema eléctrico</strong> (batería, luces e indicadores).</li>
+            </ul>
+            <p>
+              Un mantenimiento preventivo periódico ayuda a prolongar la vida útil de tu moto, mejorar el rendimiento 
+              y garantizar tu seguridad en la carretera. ¡Agenda tu revisión hoy mismo! 🏍🔥  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal2Label">Cambio de Aceite</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Mantenemos tu motor en óptimas condiciones con nuestro servicio de <strong>Cambio de Aceite</strong>. 
+              <br><br>
+              Este procedimiento incluye:
+            </p>
+            <ul>
+              <li>🔧 <strong>Drenado del aceite usado</strong> para eliminar residuos y sedimentos.</li>
+              <li>🛠 <strong>Revisión y cambio del filtro de aceite</strong> (si es necesario) para mejorar la filtración.</li>
+              <li>⛽ <strong>Rellenado con aceite nuevo</strong> de acuerdo con las especificaciones del fabricante.</li>
+              <li>⚙ <strong>Inspección de posibles fugas</strong> y verificación de niveles para un rendimiento óptimo.</li>
+            </ul>
+            <p>
+              Un cambio de aceite regular mejora la lubricación del motor, reduce el desgaste y prolonga la vida útil de tu motocicleta. 🏍  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal3Label">Alineación y Balanceo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              El servicio de <strong>Alineación y Balanceo</strong> es esencial para garantizar un manejo seguro y 
+              estable en tu motocicleta. Nuestro proceso incluye:
+            </p>
+            <ul>
+              <li>📏 <strong>Ajuste de la alineación</strong> de la rueda delantera y trasera para evitar desgaste irregular.</li>
+              <li>⚖ <strong>Balanceo de llantas</strong> para reducir vibraciones y mejorar la estabilidad.</li>
+              <li>🔍 <strong>Inspección de neumáticos</strong> para verificar desgaste y presión adecuada.</li>
+              <li>🛠 <strong>Revisión de rodamientos y suspensión</strong> para detectar posibles fallas.</li>
+              <li>🏍 <strong>Prueba de manejo</strong> para comprobar el rendimiento tras el ajuste.</li>
+            </ul>
+            <p>
+              Mantén el control total de tu moto, evita el desgaste prematuro de las llantas y disfruta de 
+              un viaje más seguro con nuestro servicio de alineación y balanceo. ¡Agenda tu cita hoy mismo! 🏍  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal4Label">Cambio de Batería</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              ¿Tu motocicleta tiene dificultades para encender? Es posible que la batería haya alcanzado 
+              el final de su vida útil. <br><br>Nuestro servicio de <strong>Cambio de Batería</strong> incluye:
+            </p>
+            <ul>
+              <li>🔋 <strong>Diagnóstico del estado de la batería</strong> para verificar si es necesario reemplazarla.</li>
+              <li>⚡ <strong>Selección de la batería adecuada</strong> según el modelo y las especificaciones de tu moto.</li>
+              <li>🛠 <strong>Instalación profesional</strong> con conexiones seguras para evitar fallos eléctricos.</li>
+              <li>🔍 <strong>Revisión del sistema de carga</strong> para asegurar un óptimo funcionamiento.</li>
+              <li>✅ <strong>Prueba final</strong> para garantizar un arranque sin problemas.</li>
+            </ul>
+            <p>
+              No dejes que una batería defectuosa te deje varado. ¡Renueva la energía de tu moto con 
+              nuestro servicio de cambio de batería y vuelve a la carretera sin preocupaciones! ⚡🏍
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal5Label">Revisión de Suspensión</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              La suspensión de tu motocicleta es clave para un manejo seguro y confortable. 
+              <br><br>
+              Nuestro servicio de <strong>Revisión de Suspensión</strong> incluye:
+            </p>
+            <ul>
+              <li>🔧 <strong>Inspección de amortiguadores</strong> para detectar fugas de aceite o desgaste.</li>
+              <li>⚙️ <strong>Revisión de horquillas</strong> y su correcto funcionamiento.</li>
+              <li>🔩 <strong>Ajuste y calibración</strong> de la suspensión según el peso y el uso de la moto.</li>
+              <li>🛠 <strong>Verificación de rodamientos y bujes</strong> para eliminar vibraciones o ruidos extraños.</li>
+              <li>✅ <strong>Pruebas de manejo</strong> para asegurar estabilidad y confort en la conducción.</li>
+            </ul>
+            <p>
+              Una suspensión en mal estado puede comprometer tu seguridad y la de tu motocicleta. 
+              ¡Haz tu revisión con nosotros y disfruta de un viaje suave y seguro! 🏍
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal6Label">Cambio de Neumáticos y Llantas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Mantener en buen estado los neumáticos y llantas de tu motocicleta es esencial para 
+              garantizar un viaje seguro y un óptimo desempeño en carretera. 
+              <br><br>
+              Nuestro servicio de <strong>Cambio de Neumáticos y Llantas</strong> incluye:
+            </p>
+            <ul>
+              <li>🏍 <strong>Inspección del estado</strong> de neumáticos y llantas para detectar desgaste, grietas o daños.</li>
+              <li>🔧 <strong>Desmontaje y montaje</strong> de neumáticos y llantas con herramientas especializadas.</li>
+              <li>⚖️ <strong>Balanceo y alineación</strong> para mejorar la estabilidad y reducir vibraciones.</li>
+              <li>🛞 <strong>Revisión de presión y ajuste</strong> según las especificaciones del fabricante.</li>
+              <li>🔩 <strong>Chequeo de válvulas y rines</strong> para prevenir fugas de aire y posibles fallas.</li>
+            </ul>
+            <p>
+              Conducir con neumáticos o llantas desgastados aumenta el riesgo de accidentes. 
+              ¡Renueva los tuyos y disfruta de un viaje más seguro y estable! 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal7Label">Pintura</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Detalles completos sobre el servicio de mantenimiento preventivo.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal8Label">Revisión de Cadena</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              La cadena es una de las partes fundamentales de la transmisión de tu motocicleta. 
+              Un mantenimiento adecuado garantiza un mejor desempeño y evita fallos prematuros. 
+              <br><br>
+              Nuestro servicio de <strong>Revisión de Cadena</strong> incluye:
+            </p>
+            <ul>
+              <li>🔍 <strong>Inspección completa</strong> para detectar desgaste, holgura o eslabones dañados.</li>
+              <li>🔧 <strong>Ajuste de tensión</strong> para garantizar un funcionamiento óptimo y evitar vibraciones.</li>
+              <li>🛠 <strong>Limpieza profunda</strong> para eliminar suciedad, residuos de grasa y partículas abrasivas.</li>
+              <li>🛢 <strong>Lubricación especializada</strong> con productos de alto rendimiento para mayor durabilidad.</li>
+              <li>⚙️ <strong>Revisión de piñones y corona</strong> para asegurar su correcto estado y alineación.</li>
+            </ul>
+            <p>
+              Una cadena bien ajustada y lubricada mejora la potencia de tu moto y prolonga la vida útil del sistema de transmisión.  
+              ¡Déjanos hacer el trabajo y disfruta de una conducción más suave y eficiente! 🏍💨
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="modal9Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal9Label">Revisión Eléctrica</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              El sistema eléctrico de tu moto es crucial para su funcionamiento. 
+              Un mantenimiento adecuado te asegura que no sufrirás inconvenientes durante tus viajes.
+              <br><br> 
+              Nuestro servicio de <strong>Revisión Eléctrica</strong> incluye:
+            </p>
+            <ul>
+              <li>🔋 <strong>Inspección de la batería</strong> para comprobar su carga y evitar posibles fallos.</li>
+              <li>💡 <strong>Chequeo de las luces</strong> (delanteras, traseras, intermitentes) para garantizar visibilidad y seguridad.</li>
+              <li>⚡ <strong>Revisión del sistema de encendido</strong> para asegurarnos de que arranques sin problemas.</li>
+              <li>🔌 <strong>Chequeo de cables y conexiones</strong> para evitar cortocircuitos o fallos eléctricos.</li>
+              <li>⚙️ <strong>Inspección de fusibles</strong> para asegurarnos de que todo el sistema eléctrico esté protegido.</li>
+            </ul>
+            <p>
+              Con nuestra revisión exhaustiva, podrás rodar tranquilo, sabiendo que tu moto está en perfecto estado eléctrico. 
+              ¡Deja que los expertos se encarguen y disfruta de una conducción segura y confiable! 🏍️⚡
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal10" tabindex="-1" aria-labelledby="modal10Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal10Label">Diagnóstico Computarizado</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Detalles completos sobre el servicio de mantenimiento preventivo.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal11" tabindex="-1" aria-labelledby="modal11Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal11Label">Cambio de Filtros</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Los filtros de tu moto son esenciales para su correcto funcionamiento. 
+              Un cambio oportuno garantiza un rendimiento óptimo y prolonga la vida útil de tu motor. 
+              <br><br>
+              Nuestro servicio de <strong>Cambio de Filtros</strong> incluye:
+            </p>
+            <ul>
+              <li>🔧 <strong>Cambio de filtro de aire</strong> para asegurar un flujo de aire limpio y sin obstrucciones, lo que mejora la combustión del motor.</li>
+              <li>🛢 <strong>Cambio de filtro de aceite</strong> para mantener el aceite limpio y evitar el desgaste prematuro del motor.</li>
+              <li>💨 <strong>Cambio de filtro de combustible</strong> para evitar impurezas que puedan afectar el rendimiento y la eficiencia del motor.</li>
+              <li>🔍 <strong>Revisión del sistema de filtrado</strong> para detectar posibles fugas o desgastes que puedan comprometer su eficiencia.</li>
+            </ul>
+            <p>
+              Realizar estos cambios con regularidad no solo mejora el desempeño de tu moto, sino que también ayuda a ahorrar en reparaciones costosas a largo plazo. 
+              ¡Confía en nosotros para mantener tu moto funcionando como nueva! 🏍️💨
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal12" tabindex="-1" aria-labelledby="modal12Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal12Label">Revisión de Embrague</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              El <strong>embrague</strong> es uno de los componentes más cruciales de tu motocicleta, ya que permite el control adecuado de la potencia del motor y la transición entre marchas. 
+              Una revisión periódica evita fallos que pueden afectar el rendimiento y la seguridad. 
+              <br><br>
+              Nuestro servicio de <strong>Revisión de Embrague</strong> incluye:
+            </p>
+            <ul>
+              <li>🔧 <strong>Inspección de discos de embrague</strong> para detectar desgaste o daños que puedan comprometer su funcionamiento.</li>
+              <li>⚙️ <strong>Comprobación de la tensión del cable</strong> o del sistema hidráulico para asegurar un accionamiento suave y preciso.</li>
+              <li>🛠 <strong>Revisión del sistema de transmisión</strong> para detectar posibles fugas o componentes desgastados.</li>
+              <li>🔍 <strong>Verificación del alineamiento y la funcionalidad</strong> para garantizar que el embrague no esté afectando el rendimiento general de la moto.</li>
+            </ul>
+            <p>
+              Un embrague en buen estado mejora la maniobrabilidad, la aceleración y la seguridad de tu moto. 
+              ¡Déjanos revisar y ajustar el embrague para que puedas disfrutar de una conducción suave y sin preocupaciones! 🏍️🔧
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal13" tabindex="-1" aria-labelledby="modal13Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal13Label">Rectificación de Motor</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Detalles completos sobre el servicio de mantenimiento preventivo.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal14" tabindex="-1" aria-labelledby="modal14Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal14Label">Revisión de Luces</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Las luces de tu motocicleta son esenciales para tu seguridad en la carretera, especialmente en condiciones de baja visibilidad. 
+              Una revisión adecuada asegura que tus luces funcionen de manera óptima, evitando riesgos innecesarios. 
+              <br><br>
+              Nuestro servicio de <strong>Revisión de Luces</strong> incluye:
+            </p>
+            <ul>
+              <li>💡 <strong>Inspección de luces delanteras y traseras</strong> para garantizar que no haya bombillas fundidas o dañadas.</li>
+              <li>🔦 <strong>Revisión de luces de freno y direccionales</strong> para asegurar que respondan de manera eficiente cuando sea necesario.</li>
+              <li>🔌 <strong>Chequeo de conexiones eléctricas</strong> para detectar posibles fallos o cortocircuitos en el sistema.</li>
+              <li>⚙️ <strong>Verificación del ángulo de las luces</strong> para asegurar una visibilidad óptima durante la conducción nocturna.</li>
+            </ul>
+            <p>
+              Mantener las luces de tu moto en perfecto estado no solo mejora tu visibilidad, sino también la de otros conductores, asegurando una conducción más segura. 
+              ¡Confía en nosotros para mantener tus luces en su mejor estado! 🚦
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal15" tabindex="-1" aria-labelledby="modal15Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal15Label">Asistencia en Ruta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Detalles completos sobre el servicio de mantenimiento preventivo.
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
-  <footer>
+  <footer class="footer">
     <mi-footer></mi-footer>
   </footer>
 
