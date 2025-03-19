@@ -24,27 +24,27 @@ class MiHeader extends HTMLElement {
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="Vistas/servicios.html">
+            <a class="nav-link text-white" href="servicios.html">
                 <img src="Imagenes/servicio.png" alt="Servicios" class="icono-navbar"> Servicios
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="Vistas/horarios.html">
+            <a class="nav-link text-white" href="horarios.html">
                 <img src="Imagenes/calendario.png" alt="Horarios" class="icono-navbar"> Horarios
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="Vistas/blog.html">
+            <a class="nav-link text-white" href="blog.html">
                 <img src="Imagenes/blog.png" alt="Blog" class="icono-navbar"> Blog
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="Vistas/nosotros.html">
+            <a class="nav-link text-white" href="nosotros.html">
                 <img src="Imagenes/sobrenosotros.png" alt="Sobre Nosotros" class="icono-navbar"> Sobre Nosotros
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="Vistas/contacto.html">
+            <a class="nav-link text-white" href="contacto.html">
                 <img src="Imagenes/contactos.png" alt="Contacto" class="icono-navbar"> Contacto
             </a>
         </li>
