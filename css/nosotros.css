@@ -1,0 +1,28 @@
+.negrita {
+    font-weight: bold;
+}
+
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Clases para la animación */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Cuando el elemento entra en la vista */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
