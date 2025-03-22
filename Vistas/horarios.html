@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horario Interactivo</title>
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -13,10 +13,11 @@
     <script src="../Header/Header.js" defer></script>
     <script src="../Footer/Footer.js" defer></script>
 </head>
+
 <body>
     <header>
         <mi-header></mi-header>
-      </header>
+    </header>
     <!-- Sección Hero -->
     <section class="hero">
         <div class="container">
@@ -71,96 +72,103 @@
         const weekStartDate = getWeekStartDate(today);
         const maxReservasPorHorario = 3;
 
-        function obtenerEstadoGuardado() {
-            const lastResetDate = localStorage.getItem("lastResetDate");
-            const horariosGuardados = JSON.parse(localStorage.getItem("horariosGuardados")) || {};
+        async function obtenerEstadoGuardado(dia) {
+            const docRef = doc(db, "horarios", dia);
+            const docSnap = await getDoc(docRef);
 
-            // Verifica si es una nueva semana
-            if (lastResetDate && new Date(lastResetDate).getWeek() !== today.getWeek()) {
-                // Es una nueva semana, resetear todo
-                resetHorarios();
+            if (docSnap.exists()) {
+                return docSnap.data();
+            } else {
+                console.log("No hay datos para", dia);
+                return {}; // Si no hay datos, devuelve un objeto vacío
             }
-
-            return horariosGuardados;
+        }
+        async function guardarEstado(dia, horariosGuardados) {
+            try {
+                await setDoc(doc(db, "horarios", dia), horariosGuardados);
+                console.log("Horario guardado correctamente en Firebase.");
+            } catch (error) {
+                console.error("Error al guardar horario:", error);
+            }
         }
 
-        function guardarEstado(horariosGuardados) {
-            localStorage.setItem("horariosGuardados", JSON.stringify(horariosGuardados));
-            localStorage.setItem("lastResetDate", today.toISOString());
+        async function verificarYResetearHorarios() {
+            const lastResetDoc = await getDoc(doc(db, "config", "reset"));
+            const lastResetDate = lastResetDoc.exists() ? lastResetDoc.data().fecha : null;
+            const today = new Date();
+            const thisWeekMonday = getWeekStartDate(today).toISOString().split('T')[0];
+
+            if (lastResetDate !== thisWeekMonday) {
+                console.log("Reseteando horarios para una nueva semana...");
+
+                const dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+                for (let dia of dias) {
+                    await setDoc(doc(db, "horarios", dia), {}); // Limpia los horarios
+                }
+
+                await setDoc(doc(db, "config", "reset"), { fecha: thisWeekMonday }); // Guarda la fecha de último reset
+            }
         }
 
-        function resetHorarios() {
-            localStorage.setItem("horariosGuardados", JSON.stringify({}));
-            localStorage.setItem("lastResetDate", today.toISOString());
+        // Obtener el lunes de la semana actual
+        function getWeekStartDate(date) {
+            const startDate = new Date(date);
+            startDate.setDate(startDate.getDate() - startDate.getDay() + 1);
+            return startDate;
         }
 
-        function actualizarHorario(dia) {
+        // Ejecutar el reset al cargar la página
+        verificarYResetearHorarios();
+
+        async function actualizarHorario(dia) {
             const tbody = document.getElementById("scheduleBody");
             tbody.innerHTML = "";
-            const horariosGuardados = obtenerEstadoGuardado();
+
+            const horariosGuardados = await obtenerEstadoGuardado(dia);
 
             if (horarios[dia].length === 0) {
-            tbody.innerHTML = `<tr><td colspan="2" class="unavailable">Cerrado</td></tr>`;
-        } else {
-            horarios[dia].forEach(hora => {
-                const reservasActuales = (horariosGuardados[dia] && horariosGuardados[dia][hora]) || 0;
-                const estado = reservasActuales >= maxReservasPorHorario ? "unavailable" : "available";
-                const estadoTexto = reservasActuales >= maxReservasPorHorario 
-                    ? "No disponible" 
-                    : `Espacios Disponibles (${maxReservasPorHorario - reservasActuales})`;
+                tbody.innerHTML = `<tr><td colspan="2" class="unavailable">Cerrado</td></tr>`;
+            } else {
+                horarios[dia].forEach(hora => {
+                    const reservasActuales = horariosGuardados[hora] || 0;
+                    const estado = reservasActuales >= maxReservasPorHorario ? "unavailable" : "available";
+                    const estadoTexto = reservasActuales >= maxReservasPorHorario
+                        ? "No disponible"
+                        : `Espacios Disponibles (${maxReservasPorHorario - reservasActuales})`;
 
-                const row = `<tr>
-                    <td>${hora}</td>
-                    <td class="${estado}" data-hora="${hora}" data-dia="${dia}">${estadoTexto}</td>
-                </tr>`;
-                tbody.innerHTML += row;
-            });
-        }
+                    const row = `<tr>
+                <td>${hora}</td>
+                <td class="${estado}" data-hora="${hora}" data-dia="${dia}">${estadoTexto}</td>
+            </tr>`;
+                    tbody.innerHTML += row;
+                });
+            }
 
             agregarEventosClick();
         }
 
         function agregarEventosClick() {
-            document.querySelectorAll(".available, .unavailable").forEach(element => {
-                element.addEventListener("click", function() {
+            document.querySelectorAll(".available").forEach(element => {
+                element.addEventListener("click", async function () {
                     const dia = this.getAttribute("data-dia");
                     const hora = this.getAttribute("data-hora");
 
-                    let horariosGuardados = obtenerEstadoGuardado();
-                if (!horariosGuardados[dia]) horariosGuardados[dia] = {};
-                if (!horariosGuardados[dia][hora]) horariosGuardados[dia][hora] = 0;
+                    let horariosGuardados = await obtenerEstadoGuardado(dia);
 
-                if (horariosGuardados[dia][hora] < maxReservasPorHorario) {
-                    horariosGuardados[dia][hora] += 1;
-                    guardarEstado(horariosGuardados);
-                    actualizarHorario(dia);
-                };
+                    if (!horariosGuardados[hora]) horariosGuardados[hora] = 0;
+                    if (horariosGuardados[hora] < maxReservasPorHorario) {
+                        horariosGuardados[hora] += 1;
+                        await guardarEstado(dia, horariosGuardados);
+                        actualizarHorario(dia);
+                    }
+                });
             });
-        });
         }
 
-        // Función para obtener la fecha de inicio de la semana
-        Date.prototype.getWeek = function() {
-            var d = new Date(this.getFullYear(), this.getMonth(), this.getDate());
-            d.setHours(0, 0, 0, 0);
-            d.setDate(d.getDate() - d.getDay() + 1); // El lunes es el primer día de la semana
-            return Math.ceil((((d - new Date(d.getFullYear(), 0, 1)) / 86400000) + 1) / 7);
-        };
-
-        function getWeekStartDate(date) {
-            const startDate = new Date(date);
-            startDate.setDate(startDate.getDate() - date.getDay() + 1); // El lunes de la semana
-            return startDate;
-        }
-
-        document.getElementById("daySelector").addEventListener("change", function() {
-            actualizarHorario(this.value);
-        });
-
-        actualizarHorario("Lunes"); // Cargar horario inicial
     </script>
-  <footer class="footer">
-    <mi-footer></mi-footer>
-  </footer>
+    <footer class="footer">
+        <mi-footer></mi-footer>
+    </footer>
 </body>
+
 </html>
