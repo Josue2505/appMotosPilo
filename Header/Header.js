@@ -58,8 +58,3 @@ class MiHeader extends HTMLElement {
   }
 }
 customElements.define("mi-header", MiHeader);
-{/* <div class="logo">
-            <a href="servicios.html" style="min-width: 7rem;">
-              <img src="Imagenes/contactos.png" alt="Logo" width="142">
-            </a>
-          </div> */}
