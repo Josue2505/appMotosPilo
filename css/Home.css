@@ -3,18 +3,18 @@ body {
 }
 
 .hero {
-    background: url('../Imagenes/prueba.jpeg') center/cover no-repeat;
+    background: url('../Imagenes/bannerHome3.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
 }
 
 .hero .container {
-    /*background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
 }
 
 
@@ -66,4 +66,40 @@ body {
 
 .gallery-img:active {
   transform: scale(0.95);
+}
+
+/* Clases para la animación */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Cuando el elemento entra en la vista */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  /* background: url("../Imagenes/banner.jpg") no-repeat center center/cover; */
+  animation: zoomOut 0.5s ease-in-out forwards;
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
 }

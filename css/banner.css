@@ -1,5 +1,4 @@
 .banner img {
-  width: 100%; /* Que ocupe todo el ancho */
-  max-height: 300px; /* Altura máxima */
-  object-fit: cover; /* Para que la imagen no se deforme */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  height: auto; /* Mantiene la proporción de la imagen */
 }

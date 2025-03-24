@@ -20,32 +20,32 @@ class MiHeader extends HTMLElement {
     <ul class="navbar-nav ms-auto">
         <li class="nav-item">
             <a class="nav-link text-white" href="index.html">
-                <img src="Imagenes/hogar.png" alt="Inicio" class="icono-navbar"> Inicio
+                <img src="Imagenes/hogar1.png" alt="Inicio" class="icono-navbar"> Inicio
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" href="servicios.html">
-                <img src="Imagenes/servicio.png" alt="Servicios" class="icono-navbar"> Servicios
+                <img src="Imagenes/servicio1.png" alt="Servicios" class="icono-navbar"> Servicios
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" href="horarios.html">
-                <img src="Imagenes/calendario.png" alt="Horarios" class="icono-navbar"> Horarios
+                <img src="Imagenes/calendario1.png" alt="Horarios" class="icono-navbar"> Horarios
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" href="blog.html">
-                <img src="Imagenes/blog.png" alt="Blog" class="icono-navbar"> Blog
+                <img src="Imagenes/blog1.png" alt="Blog" class="icono-navbar"> Blog
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" href="nosotros.html">
-                <img src="Imagenes/sobrenosotros.png" alt="Sobre Nosotros" class="icono-navbar"> Sobre Nosotros
+                <img src="Imagenes/sobrenosotros1.png" alt="Sobre Nosotros" class="icono-navbar"> Sobre Nosotros
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" href="contacto.html">
-                <img src="Imagenes/contactos.png" alt="Contacto" class="icono-navbar"> Contacto
+                <img src="Imagenes/contactos1.png" alt="Contacto" class="icono-navbar"> Contacto
             </a>
         </li>
     </ul>
@@ -58,8 +58,3 @@ class MiHeader extends HTMLElement {
   }
 }
 customElements.define("mi-header", MiHeader);
-{/* <div class="logo">
-            <a href="servicios.html" style="min-width: 7rem;">
-              <img src="Imagenes/contactos.png" alt="Logo" width="142">
-            </a>
-          </div> */}

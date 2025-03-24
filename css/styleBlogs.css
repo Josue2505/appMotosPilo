@@ -1,0 +1,16 @@
+/* Estilo global */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+ul {
+  list-style-type: none; /* Ocultar los puntos de las listas */
+  padding-left: 0; /* Eliminar la indentación */
+}
+
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
