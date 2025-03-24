@@ -18,8 +18,14 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+.table {
+    width: 80%; /* Ajusta el ancho de la tabla */
+    margin: auto; /* Centra la tabla */
+    border-collapse: collapse; /* Une los bordes */
+}
 .table th, .table td {
     text-align: center;
+    padding: 12px; 
 }
 .available {
     background-color: #28a745;
