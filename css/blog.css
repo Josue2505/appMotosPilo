@@ -70,3 +70,10 @@ body {
     color: inherit;
     display: block;
 }
+
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
