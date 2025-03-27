@@ -91,9 +91,17 @@ ul {
 }
 
 .hero .container {
-    /* background: rgba(0, 0, 0, 0.5); Fondo negro semitransparente */
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
+}
+
+.container p, 
+.container ul, 
+.container h2 { 
+    text-align: justify; 
+    max-width: 800px; /* Limita el ancho para centrarlo */
+    margin: 0 auto; /* Centra horizontalmente */
 }
