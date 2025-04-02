@@ -98,10 +98,24 @@ ul {
     /* backdrop-filter: blur(5px); */
 }
 
-.container p, 
-.container ul, 
-.container h2 { 
+.blog-content p, 
+.blog-content ul, 
+.blog-content h2 { 
     text-align: justify; 
     max-width: 800px; /* Limita el ancho para centrarlo */
     margin: 0 auto; /* Centra horizontalmente */
+}
+
+
+/* Clases para la animación */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Cuando el elemento entra en la vista */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
