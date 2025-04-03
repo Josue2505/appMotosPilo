@@ -7,17 +7,18 @@ class MiChatBot extends HTMLElement {
             💬
         </div>
 
-        <div id="chat-container" class="card shadow">
-            <div class="card-header bg-primary text-white d-flex justify-content-between">
-                <span>Motos Pilo</span>
+        <div id="chat-container" class="card shadow" >
+            <div class="card-header bg-primary text-white d-flex justify-content-between" style="background-color: red;">
+                <span >Motos Pilo </span>
                 <button class="btn btn-sm btn-light" onclick="toggleChat()">✖</button>
             </div>
-            <div id="chat-box" class="card-body overflow-auto"></div>
-            <div class="card-footer d-flex">
-                <input type="text" id="chat-input" class="form-control me-2" placeholder="Escribe aquí..."
-                    onkeypress="handleKeyPress(event)">
-                <button class="btn btn-primary" onclick="sendMessage()">Enviar</button>
-            </div>
+            <div id="chat-box" style="max-height: 300px; overflow-auto; padding: 10px;"></div>
+        <div id="options" style="padding: 10px; display: flex; flex-wrap: wrap; gap: 5px;">
+            <button class="chat-option" onclick="selectOption('horario')">Horario</button>
+            <button class="chat-option" onclick="selectOption('ubicacion')">Ubicación</button>
+            <button class="chat-option" onclick="selectOption('servicios')">Servicios</button>
+            <button class="chat-option" onclick="selectOption('necesito una cita')">Cita</button>
+        </div>
         </div>
 
 
@@ -26,61 +27,31 @@ class MiChatBot extends HTMLElement {
 }
 customElements.define("mi-chatbot", MiChatBot);
 
-
 function toggleChat() {
   let chat = document.getElementById("chat-container");
   chat.style.display = chat.style.display === "block" ? "none" : "block";
 }
 
-function sendMessage() {
-  let input = document.getElementById("chat-input").value.trim();
-  if (input === "") return;
 
+function selectOption(option) {
   let chatBox = document.getElementById("chat-box");
-  chatBox.innerHTML += `<div class="chat-message chat-user align-self-end"><b>Tú:</b> ${input}</div>`;
-
-  let response = getResponse(input);
+  chatBox.innerHTML += `<div style='text-align: right; background: #d1ecf1; padding: 5px; border-radius: 5px; margin: 5px 0;'><b>Tú:</b> ${option}</div>`;
   setTimeout(() => {
-    chatBox.innerHTML += `<div class="chat-message chat-bot"><b>Bot:</b> ${response}</div>`;
-    chatBox.scrollTop = chatBox.scrollHeight;
+      chatBox.innerHTML += `<div style='text-align: left; background: #f8d7da; padding: 5px; border-radius: 5px; margin: 5px 0;'><b>Bot:</b> ${getResponse(option)}</div>`;
+      chatBox.scrollTop = chatBox.scrollHeight;
   }, 500);
-
-  document.getElementById("chat-input").value = "";
 }
+
 
 function getResponse(input) {
   const responses = {
-    hola: "¡Hola! Bienvenido a nuestro taller de motos. ¿En qué podemos ayudarte?",
-    horario:
-      "Nuestro horario de atención es de lunes a sabados de 8:00 AM a 6:00 PM.",
-    ubicacion:
-      "Estamos ubicados en Alajuela , Atenas, Mercedes, Barrio Fátima. ¡Visítanos cuando gustes!",
-    servicios:
-      "Ofrecemos mantenimiento preventivo, cambio de aceite, reparación de frenos, ajuste de cadena y mucho más.",
-    "cambio de aceite":
-      "El cambio de aceite es esencial para el buen funcionamiento de tu moto. Podemos hacerlo en menos de 30 minutos.",
-    "mantenimiento preventivo":
-      "Revisamos frenos, neumáticos, luces y ajustamos piezas para que tu moto esté en perfecto estado.",
-    "revisión general":
-      "La revisión incluye chequeo de frenos, motor, luces y sistema eléctrico. ¡Pregunta por nuestras promociones!",
-    "necesito una cita":
-      "Puedes agendar una cita llamándonos al 83665889 o visitándonos en nuestro taller.",
-    "aceptan tarjetas":
-      "Sí, aceptamos pagos en efectivo, tarjetas de débito y crédito.",
-    "reparación de frenos":
-      "Podemos revisar y reparar los frenos de tu moto. Te recomendamos hacer una revisión cada 6 meses.",
-    afinación:
-      "Una afinación completa mejora el rendimiento de tu moto. Incluye cambio de bujías, filtros y ajuste del motor.",
-    adiós:
-      "¡Gracias por visitarnos! Si necesitas más información, estamos aquí para ayudarte.",
-    default:
-      "No entiendo la pregunta, intenta con otra palabra clave como 'servicios' o 'cambio de aceite'.",
+    horario: "Nuestro horario es de lunes a sábado de 8:00 AM a 6:00 PM.",
+    ubicacion: "Estamos en Alajuela, Atenas, Mercedes, Barrio Fátima.",
+    servicios:"Ofrecemos mantenimiento, cambio de aceite, reparación de frenos y más.",
+    "necesito una cita": "Puedes agendar una cita llamándonos al 83665889.",
+    default: "No entiendo la pregunta, intenta otra opción.",
   };
   return responses[input.toLowerCase()] || responses["default"];
 }
 
-function handleKeyPress(event) {
-  if (event.key === "Enter") {
-    sendMessage();
-  }
-}
+
