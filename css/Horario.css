@@ -52,3 +52,37 @@ body {
         padding: 0 15px;
     }
 }
+
+
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.agendar-content h2,
+.agendar-content p,
+.agendar-content label,
+.agendar-content select,
+.agendar-content input,
+.agendar-content small,
+.agendar-content button {
+    text-align: justify;
+    max-width: 800px; /* Limita el ancho para centrarlo */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block; /* Asegura que los elementos de formulario se ajusten */
+}
+
+#frase-moto {
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    min-height: 50px; /* Ajusta según la cantidad de texto */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}

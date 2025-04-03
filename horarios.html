@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/Horario.css" />
+    <link rel="stylesheet" href="../css/banner.css" />
     <script src="../Header/Header.js" defer></script>
     <script src="../Footer/Footer.js" defer></script>
 </head>
@@ -17,21 +18,68 @@
         <mi-header></mi-header>
     </header>
 
-    <div class="container mt-5">
-        <h2 class="text-center">Agendar Cita</h2>
-        <div class="mb-3">
-            <label for="fecha" class="form-label">Selecciona una fecha:</label>
-            <input type="date" id="fecha" class="form-control" min="">
+    <section>
+      <div class="banner">
+        <img
+          src="Imagenes/bannerHorarios.png"
+          alt="Banner de servicios"
+          class="img-fluid"
+        />
+      </div>
+    </section>
+
+    <section class="agendar-content">
+        <div class="container mt-5">
+            <h2 class="text-center">Agendar Cita</h2>
+            <p class="text-center text-muted">Selecciona una fecha y hora para reservar tu cita.</p>
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Selecciona una fecha:</label>
+                <input type="date" id="fecha" class="form-control" min="">
+            </div>
+            <div class="mb-3">
+                <label for="hora" class="form-label">Selecciona una hora:</label>
+                <select id="hora" class="form-select">
+                    <option value="" disabled selected>Selecciona una hora</option>
+                </select>
+                <small class="text-muted">Las citas están disponibles de 8:00 AM a 4:00 PM.</small>
+            </div>
+        <button id="agendar" class="btn btn-primary w-100 d-flex justify-content-center align-items-center"
+            style="background-color: brown; border-color: brown;">
+            📅 Agendar Cita
+        </button>
+        <br><br>
+        <div>
+            <p id="frase-moto" class=" fw-bold fs-5 text-center"></p>
         </div>
-        <div class="mb-3">
-            <label for="hora" class="form-label">Selecciona una hora:</label>
-            <select id="hora" class="form-select">
-                <option value="" disabled selected>Selecciona una hora</option>
-            </select>
         </div>
-        <button id="agendar" class="btn btn-primary w-100 " style="background-color:brown; border-color: brown;">Agendar Cita</button>
-       
-    </div>
+        <br>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const frasesMoto = [
+                "Tu moto te lleva a todas partes, devuélvele el favor con una revisión a tiempo.",
+                "Las mejores rutas inician con una moto en buen estado. ¡Agenda tu revisión hoy!",
+                "Un ajuste hoy evita problemas mañana. ¡Dale a tu moto el cuidado que merece!",
+                "¿Listo para la aventura? Primero asegúrate de que tu moto también lo esté.",
+                "Una moto bien cuidada nunca te dejará tirado. ¡No pospongas tu revisión!",
+                "El camino es impredecible, pero tu moto no debería serlo. ¡Hazle su chequeo ahora!",
+                "Cada kilómetro cuenta, cada revisión importa. ¡Agenda ahora y viaja tranquilo!",
+                "Cuida tu moto hoy y ella te cuidará en el camino. ¡Programa tu mantenimiento!",
+                "La seguridad no es un gasto, es una inversión. ¡Revisa tu moto y maneja seguro!",
+                "Un motor feliz es un viaje sin preocupaciones. ¡Dale a tu moto el mejor cuidado!"
+            ];
+
+            function cambiarFrase() {
+                const fraseElemento = document.getElementById("frase-moto");
+                const indiceAleatorio = Math.floor(Math.random() * frasesMoto.length);
+                fraseElemento.textContent = frasesMoto[indiceAleatorio];
+            }
+
+            cambiarFrase();
+            setInterval(cambiarFrase, 7000);
+        });
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -59,7 +107,7 @@
                 return;
             }
 
-            let confirmacion = confirm(`¿Desea agendar su cita el día ${fecha} a las ${horaTexto}?`);
+            let confirmacion = confirm(`✅ ¿Desea agendar su cita el día ${fecha} a las ${horaTexto}?`);
             if (confirmacion) {
                 let mensaje = `Agendar cita el día ${fecha} a las ${horaTexto}`;
                 let telefono = "+50684201547"; // Reemplaza con tu número de WhatsApp
@@ -68,6 +116,16 @@
             }
         });
     </script>
+<br><br>
+    <section>
+      <div class="banner">
+        <img
+          src="Imagenes/bannerFooter.png"
+          alt="Banner de servicios"
+          class="img-fluid"
+        />
+      </div>
+    </section>
 
     <footer class="footer">
         <mi-footer></mi-footer>

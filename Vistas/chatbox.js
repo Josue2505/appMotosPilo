@@ -45,10 +45,12 @@ function selectOption(option) {
 
 function getResponse(input) {
   const responses = {
-    horario: "Nuestro horario es de lunes a sábado de 8:00 AM a 6:00 PM.",
+    horario: "Nuestro horario es de lunes a sábado de 8:00 AM a 5:00 PM.",
     ubicacion: "Estamos en Alajuela, Atenas, Mercedes, Barrio Fátima.",
-    servicios:"Ofrecemos mantenimiento, cambio de aceite, reparación de frenos y más.",
-    "necesito una cita": "Puedes agendar una cita llamándonos al 83665889.",
+    servicios:
+      "Ofrecemos mantenimiento, cambio de aceite, reparación de frenos y más.",
+    "necesito una cita":
+      "Puedes agendar una cita por medio de Whatsapp al número 83665889 o por medio del correo stevepilo@hotmail.com",
     default: "No entiendo la pregunta, intenta otra opción.",
   };
   return responses[input.toLowerCase()] || responses["default"];
