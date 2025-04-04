@@ -179,17 +179,37 @@ class ChatBot {
       direccion: {
         text: "Nuestra dirección es Alajuela, Atenas, Barrio Fátima.",
       },
-      mapa: { text: "Puedes vernos en Google Maps aquí: [Enlace]" },
+      mapa: {
+        text: 'Puedes vernos en Google Maps aquí: <a href="contacto.html" target="_blank">Ver ubicación</a>',
+      },
       servicios: {
         text: "Tenemos varios servicios, ¿cuál te interesa?",
         suboptions: [
           { text: "🛠️ Mantenimiento", value: "mantenimiento" },
           { text: "🛢️ Cambio de aceite", value: "cambio_aceite" },
+          // { text: "🔧 Cambio de Suspensión", value: "cambio_suspension" },
+          { text: "⚡ Revisión eléctrica", value: "revision_electrica" },
+          // { text: "🛞 Cambio de llantas y neumáticos", value: "cambio_llantas_neumaticos"},
+          { text: "📋 Ver más Servicios", value: "ver_servicios" },
         ],
       },
-      mantenimiento: { text: "Ofrecemos mantenimiento completo por ₡25,000." },
+      mantenimiento: {
+        text: "Realizamos un mantenimiento completo para garantizar que tu moto rinda al máximo en cada viaje. No dejes que el desgaste te detenga.",
+      },
       cambio_aceite: {
-        text: "Cambio de aceite por ₡10,000 con filtro incluido.",
+        text: "Mantén tu motor en perfecto estado con nuestro servicio de cambio de aceite y filtro. Protege el corazón de tu moto y evita desgastes innecesarios.",
+      },
+      cambio_suspension: {
+        text: "Una suspensión en buen estado mejora tu confort y control en cada trayecto. Ajustamos y reemplazamos la suspensión de tu moto para un viaje más suave y seguro. ¡Siente la diferencia en cada kilómetro!",
+      },
+      revision_electrica: {
+        text: "No dejes que una falla eléctrica arruine tu ruta. Revisamos el sistema eléctrico de tu moto para detectar y solucionar cualquier problema antes de que sea tarde.",
+      },
+      cambio_llantas_neumaticos: {
+        text: "Tus neumáticos son clave para una conducción segura. Cambiamos llantas y neumáticos para ofrecerte el mejor rendimiento y agarre en todo tipo de terreno. ",
+      },
+      ver_servicios: {
+        text: "Ver más Servicios presióne <a href='servicios.html'>aquí</a>.",
       },
       cita: { text: "Puedes agendar una cita al WhatsApp 83665889." },
       default: { text: "No entiendo la pregunta, intenta otra opción." },

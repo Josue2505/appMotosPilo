@@ -72,7 +72,7 @@
 
 /* Encabezado del chat */
 .chat-header {
-    background: red;
+    background: #b22222;
     color: white;
     padding: 10px;
     font-weight: bold;
@@ -116,7 +116,7 @@
     position: fixed;
     bottom: 100px;
     right: 25px;
-    background: red;
+    background: #b22222;
     color: white;
     padding: 10px;
     border-radius: 50%;
