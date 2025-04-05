@@ -6,31 +6,29 @@ class MiFooter extends HTMLElement {
                 <img src="../Imagenes/logoTaller.jpg" />
                 <div class="links">
                   <div class="links-column">
-                    <h2>Get Started</h2>
-                    <a>Introduction</a>
-                    <a>Documentation</a>
-                    <a>Usage</a>
-                    <a>Globals</a>
-                    <a>Elements</a>
+                    <h2>Secciones Principales</h2>
+                    <a href="#" style="color: white; text-decoration: none;transition: color 0.3s ease;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='white'">Inicio</a>                    
+                    <a href="servicios.html" style="color: white; text-decoration: none;transition: color 0.3s ease;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='white'">Servicios</a>
+                    <a href="horarios.html" style="color: white; text-decoration: none;transition: color 0.3s ease;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='white'">Horarios</a>
+                    
                   </div>
                   <div class="links-column">
-                    <h2>Resources</h2>
-                    <a>API</a>
-                    <a>Visibility</a>
-                    <a>Accessibility</a>
-                    <a>Community</a>
-                    <a>Marketplace</a>
+                    <h2>Información y Consejos</h2>
+                    <a href="blog.html" style="color: white; text-decoration: none;transition: color 0.3s ease;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='white'">Blog</a>
+                    
+                    <a href="nosotros.html" style="color: white; text-decoration: none;transition: color 0.3s ease;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='white'">Sobre Nosotros</a>
+                    <a href="contacto.html" style="color: white; text-decoration: none;transition: color 0.3s ease;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='white'">Contacto</a>
                   </div>
-                  <div class="links-column socials-column">
-                    <h2>Social Media</h2>
+                  <div class="links-column links-colores socials-column">
+                    <h2>Redes Sociales</h2>
                     <p>
-                      Follow us on social media to find out the latest updates on our
-                      progress.
+                      Síguenos en redes sociales para ver 
+                      nuestros trabajos, consejos y promociones del taller.
                     </p>
+
                     <div class="socials">
-                      <a class="fa fa-facebook"></a>
-                      <a class="fa fa-instagram"></a>
-                      <a class="fa fa-linkedin"></a>
+                      <a href="https://www.facebook.com/profile.php?id=100063569380028" class="fa fa-facebook" style="color: white; text-decoration: none;transition: color 0.3s ease;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='white'"></a>
+                      <a href="#" class="fa fa-instagram" style="color: white; text-decoration: none;transition: color 0.3s ease;" onmouseover="this.style.color='#000000'" onmouseout="this.style.color='white'"></a>
                     </div>
                   </div>
                 </div>

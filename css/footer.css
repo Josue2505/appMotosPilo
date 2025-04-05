@@ -57,7 +57,14 @@ body {
   display: grid;
   gap: 10px;
   text-align: center;
+  color: white;
+  text-decoration: none;
 }
+
+.links-colores a:hover {
+  color: #000000;
+}
+
 
 .custom-footer h2 {
   margin: 0 0 10px;
