@@ -21,6 +21,7 @@
 
   <script src="Header/Header.js" defer></script>
   <script src="Footer/Footer.js" defer></script>
+  <script src="Vistas/nosotros.js" defer></script> 
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
@@ -38,27 +39,20 @@
   <div class="banner">
     <img src="Imagenes/bannerServicios3.png" alt="Banner de servicios" class="img-fluid">
   </div>
-<!-- <br><br><br> -->
-  <!-- <div class="banner">
-  <video autoplay muted loop class="img-fluid">
-    <source src="Imagenes/bannerServiciosVid.mp4" type="video/mp4">
-    Tu navegador no soporta el video.
-  </video>
-</div> -->
 
 
   <section class="servicios py-5">
     <div class="container">
-      <h1 class="display-4 text-center mb-5">Nuestros Servicios</h1>
+      <h1 class="display-4 text-center mb-5 fade-in">Nuestros Servicios</h1>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <!-- Lista de Servicios -->
         <div class="col">
-          <div class="card shadow-sm custom-card d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#modal1">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal1">
             <div class="d-flex align-items-center">
               <img src="Imagenes/vehiculo.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
-              <div>
-                <h5 class="card-title">Mantenimiento General</h5>
+              <div class="card-body">
+                <h5 class="card-title">Mantenimiento </h5>
                 <p class="card-text">Revisión y ajuste para evitar fallos futuros.</p>
               </div>
             </div>
@@ -68,7 +62,7 @@
 
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal2">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal2">
             <div class="d-flex align-items-center">
             <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -80,7 +74,7 @@
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal3">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal3">
             <div class="d-flex align-items-center">
             <img src="Imagenes/neumatico.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -92,7 +86,7 @@
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal4">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal4">
             <div class="d-flex align-items-center">
             <img src="Imagenes/bateria.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -104,7 +98,7 @@
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal5">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal5">
             <div class="d-flex align-items-center">
             <img src="Imagenes/suspension.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -116,7 +110,7 @@
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal6">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal6">
             <div class="d-flex align-items-center">
             <img src="Imagenes/neumatico-desinflado.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -128,7 +122,7 @@
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal7">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal7">
             <div class="d-flex align-items-center">
             <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -140,7 +134,7 @@
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal8">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal8">
             <div class="d-flex align-items-center">
             <img src="Imagenes/cadena.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -152,7 +146,7 @@
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal9">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal9">
             <div class="d-flex align-items-center">
             <img src="Imagenes/motor-electrico.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -164,7 +158,7 @@
         </div>
 
         <!-- <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal10">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal10">
             <div class="d-flex align-items-center">
             <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -176,7 +170,7 @@
         </div> -->
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal11">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal11">
             <div class="d-flex align-items-center">
             <img src="Imagenes/filtrar.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -188,7 +182,7 @@
         </div>
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal12">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal12">
             <div class="d-flex align-items-center">
             <img src="Imagenes/palanca.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -200,7 +194,7 @@
         </div>
 
         <!-- <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal13">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal13">
             <div class="d-flex align-items-center">
             <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -212,7 +206,7 @@
         </div> -->
 
         <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal14">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal14">
             <div class="d-flex align-items-center">
             <img src="Imagenes/luces-de-coche.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -224,7 +218,7 @@
         </div>
 
         <!-- <div class="col">
-          <div class="card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal15">
+          <div class="fade-in card shadow-sm custom-card" data-bs-toggle="modal" data-bs-target="#modal15">
             <div class="d-flex align-items-center">
             <img src="Imagenes/aceite.png" alt="Icono" class="img-fluid me-3 custom-img" width="100px" height="100px">
             <div class="card-body">
@@ -651,8 +645,378 @@
         </div>
       </div>
     </div>
-
+<br><br>
   </section>
+
+  <section class="gallery text-center">
+  <div class="container">
+    <br><br>
+    <h2 class="fade-in">Galería de Servicios</h2>
+    <br><br>
+    <div class="row">
+      <!-- Cuadro 1 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller101.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen1">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 2 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller2.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen2">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 3 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller3.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen3">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 4 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller4.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen4">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 5 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller5.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen5">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 6 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller 6.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen6">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 7 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller7.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen7">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 8 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller8.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen8">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 9 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller9.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen9">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 10 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller10.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen10">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 11 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller11.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen11">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 12 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller12.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen12">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 13 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller13.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen13">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 14 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller14.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen14">
+        </div>
+      </div>
+<br>
+      <!-- Cuadro 15 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller15.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen15">
+        </div>
+      </div>
+      <br>
+      <!-- Cuadro 16 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller16.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen16">
+        </div>
+      </div>
+      <br>
+      <!-- Cuadro 17 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller17.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen17">
+        </div>
+      </div>
+      <br>
+      <!-- Cuadro 18 -->
+      <div class="col-md-4 mb-4 fade-in">
+        <div class="card border-0">
+          <img src="Imagenes/taller18.jpg" class="card-img-top gallery-img" alt="Imagen 6"
+            style="border-radius: 15px; object-fit: cover; height: 300px; transition: transform 0.3s ease-in-out;"
+            data-bs-toggle="modal" data-bs-target="#modalImagen18">
+        </div>
+      </div>
+            
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen1" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller101.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen2" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller2.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen3" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller3.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen4" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller4.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen5" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller5.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen6" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller 6.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen7" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller7.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen8" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller8.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen9" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller9.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen10" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller10.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen11" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller11.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen12" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller12.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen13" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller13.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen14" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller14.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen15" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller15.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen16" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller16.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen17" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller17.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modales -->
+      <div class="modal fade" id="modalImagen18" tabindex="-1" aria-labelledby="imagenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+              <img src="Imagenes/taller18.jpg" class="img-fluid w-100" alt="Imagen grande" style="max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
   <!-- Banner -->
   <div class="banner">
