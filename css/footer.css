@@ -162,4 +162,11 @@ body {
   .socials-column :is(h2, p) {
     display: block;
   }
+
+  .texto-negro {
+    color: black;
+  }
+
+  
+
 }

@@ -39,11 +39,13 @@ class MiFooter extends HTMLElement {
               <footer class="text-white text-center py-3" style="background-color: #b22222">
                 <div class="container">
                   &copy; <span id="year">2025</span> - Motos Pilo |
-                  <a href="#" class="text-white text-decoration-none"
-                    >Política de Privacidad</a
-                  >
+                  <a href="Politicas.html" class="text-white text-decoration-none">
+                  Política de Privacidad
+                  </a>
                 </div>
               </footer>
+
+             
             </section>
             `;
   }
